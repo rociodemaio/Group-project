@@ -1,0 +1,41 @@
+#Import the required Libraries
+from tkinter import *
+window= Tk()
+window.title('Add image')
+window=Canvas(window, width=1080, height = 1080)
+window.pack()
+image = PhotoImage(file='C:\\Users\\USER\\OneDrive\\Desktop\\volumeCalculator.png')
+window.create_image(0,0, anchor =NW, image = image)
+window.mainloop()
+
+
+#triangular prism
+length= float(input('Please Enter the length of a triangle: '))
+Base= float(input('Please Enter the base of a triangle: '))
+Height= float(input('Please Enter the height of a triangle: '))
+Volume = (0.5 * length * Base * Height )
+print("\n The Volume of a triangular prism is %.2f" %Volume)
+
+
+#sphere
+
+PI = 3.14
+radius = float(input('Please Enter the Radius of a Sphere: '))
+Volume = (4 / 3) * PI * radius * radius * radius
+print("\n The Volume of a Sphere is %.2f" %Volume)
+
+
+#Cube
+length= float(input('Please Enter the length of a cube: '))
+Volume = length * length * length
+print("\n The Volume of a cube is %.2f" %Volume)
+
+#Cylinder
+PI = 3.14
+radius = float(input('Please Enter the Radius of a Cylinder: '))
+height = float(input('Please Enter the Height of a Cylinder: '))
+Volume = PI * radius * radius * height
+if radius == 0:
+   print("that won't work")
+else:
+   print(" The Volume of a Cylinder = %.2f" %Volume)
